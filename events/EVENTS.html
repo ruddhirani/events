@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EVENTS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        body{
+            background-color: #2e3338cb;
+        }   
+
+/* ........................................... */
+       
+        .main{
+            display: block;
+            align-items: center;
+            justify-content: center;
+            width: 98%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .heading{
+            width: 100%;
+            height: 10%;
+            border: 1px solid black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-weight: bold;
+            font-size: 2.0rem;
+            padding-left: 2%;
+            background-color: rgb(54, 25, 5);
+            /*border-radius: 10px;*/
+            color: white;
+        }
+        .card_sec{
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            align-content: center;
+            display: inline-flexbox;
+            background-color: BurlyWood;
+        }
+        .card_sec::-webkit-scrollbar{
+            display: block;
+        }
+        .card{
+            color: rgba(238, 235, 54, 0.918);
+            background-image: linear-gradient(to right, rgb(51, 9, 3), rgb(126, 66, 43));
+            padding-top: 1%;
+            width: 31%;
+            height: 95%;
+            align-items: center;
+            border-radius:10px;
+            display: inline-block;
+            margin-left: 1.5%;
+            margin-top: 2%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .card>.img_sec{
+            width: 85%;
+            height: 55%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card>.img_sec>img{
+            width: 100%;
+            height: 98%;
+            border-radius: 10px;
+        }
+        .card>.card_heading{
+            color: rgba(218, 168, 75, 0.932);
+            width: 85%;
+            height: 9%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1.5rem;
+        }
+        .card>.para{
+            width: 85%;
+            height: 45%;
+            overflow-y: hidden;
+            text-align:justify;
+            font-family: sans-serif;
+            margin-top: 2%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+    <body>
+
+<!-- ............................................................................... -->
+
+        <div class="main">
+            <div class="heading">Events</div>
+            <div class="card_sec">
+            </div>
+        </div>
+	
+
+
+    </body>
+    
+    <script>
+//...........................data................................................        
+        var data = [
+        {
+            event_name:"Advaita",
+            details:"'Advaita' is the annual techno-cultural fest of IIIT Bhubaneswar. It is a non-profit body that features events like Guest Lectures, Technical events, Tech and Cultural competition, Art and photography exhibition, Celebrity Night, etc. Every year our students work hard to improve the event and make it successful and memorable. Advaita is providing the young students to showcase their talents and compete against the best youth in the nation.",
+            link:"asset/req_img/adv.jpeg"
+        },
+        {
+            event_name:"Srijan",
+            details:"The film and theatre society organises its annual film fest,'Srijan' every year. They host many fun and interesting events :Between lines, Mai kalakaar, Short film making, Dubsmart, Bollywood quizzes and many more. Workshops are organised, and known personalities are invited to share their experiences.",
+            link:"asset/req_img/film.jpeg"
+        },
+        {
+            event_name:"Fete",
+            details:"The food carnival, 'Fete' is hold every year to enjoy the mouth-watering delicacies and a range of exciting games and events, also there are cooking competitons, Parathe eating competitons etc.",
+            link:"asset/req_img/food.jpeg"
+        },
+        {
+            event_name:"Ingenium",
+            details:"The literary fest,'Ingenium' is hosted every year to step into the world of unrealistic and unknown world of literature. The fest conducts many events like Debate, quizzes on TV series, treasure hunt(Mock CID), Aircrash and many fun games. Also, small sessions are organised with some known gems in this field.",
+            link:"asset/req_img/literature.jpeg"
+        },
+        {
+            event_name:"Sports(Krida)",
+            details:"The sports Fest, 'Krida' organizes various sports  from intra-college leagues like pubg tournament, cricket tournament and football tournament, to mega events like super six (cricket), futsal tournament, chess tournament, IIIT-JAM basketball tournament and volleyball tournament.",
+            link:"asset/req_img/sports.jpeg"
+        },
+        {
+            event_name:"Tech Events",
+            details:"Programming society with few passionate engineering students from IIIT Bhubaneswar who are crazy about software development and want to help others get started with it. Tech events are organised to encourage participation and events like dirt rush, blockchain workshops, line follower and many technical events.",
+            link:"asset/req_img/tech.jpeg"
+        },
+        {
+            event_name:"Art & Decor",
+            details:"The art and decor club named 'Paracosm' organizes many events throughout the year. Whether to make Rangoli on the special occasion of Diwali or to decorate the whole college on special occasions. They organize many games and events to encourage the artist in us and it instills our creativity.",
+            link:"asset/req_img/art.jpeg"
+        }]
+
+//...............................function.......................................................
+        var modal = document.getElementsByClassName("modal")[0];
+        var card_section = document.getElementsByClassName("card_sec")[0];
+        function events(e){
+            index = e;
+            index = Number(index)
+            item = data[index];
+            
+            document.getElementsByClassName("md_img_a")[0].setAttribute("src" , item.link);
+            document.getElementsByClassName("md_heading")[0].innerText = item.event_name;
+            document.getElementsByClassName("md_para")[0].innerText = item.details;
+
+            modal.style.display = "flex";
+        }
+
+        data.forEach((item,index)=>{
+
+            var card_div = document.createElement("div");
+            card_div.setAttribute("class", "card");
+            card_div.setAttribute("id", index);
+            card_div.setAttribute("onclick", "events(this.id)");
+           
+
+            var img_div = document.createElement("div");
+            img_div.setAttribute("class", "img_sec");
+
+            var img = document.createElement("img")
+            img.setAttribute("src", item.link);
+
+            img_div.appendChild(img);
+            card_div.appendChild(img_div);
+
+            var heading_div = document.createElement("div");
+            heading_div.setAttribute("class", "card_heading");
+            heading_div.innerText = item.event_name;
+            card_div.appendChild(heading_div);
+
+            var para_div = document.createElement("div");
+            para_div.setAttribute("class","para");
+            para_div.innerText = item.details ;
+            card_div.appendChild(para_div);
+
+            card_section.appendChild(card_div);
+        });
+    </script>
+</html>
